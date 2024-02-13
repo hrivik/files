@@ -1,0 +1,43 @@
+{
+   "applinks":{
+      "details":[
+         {
+            "appIDs":[
+               "UVDCL7YSZS.com.raiffeisen.raipay",
+               "8BY7YH5674.bg.kbcbank.mobilepay",
+               "5UT2V483BQ.al.raiffeisen.mobilepay",
+               "QKAASU875F.eu.newfrontier.iBanking.mobile.RZBAL-RaiPay"
+            ],
+            "components":[
+               {
+                  "/":"/push-provisioning-trigger/*",
+                  "comment":"MBA is initiating the activation"
+               },
+               {
+                  "/":"/push-provisioning-response/*",
+                  "comment":"Tokens exchange completed"
+               },
+               {
+                  "/":"/redirect-dashboard/*",
+                  "?":{"issuerCardId": "*"},
+                  "comment":"Open RaiPay dashboard with selected card"
+               }
+            ]
+         },
+         {
+            "appIDs":[
+               "UVDCL7YSZS.com.raiffeisen.raipay.mock-mba",
+               "8BY7YH5674.com.raiffeisen.online.mobile",
+               "5UT2V483BQ.al.raiffeisen.mobile",
+               "QKAASU875F.eu.newfrontier.iBanking.mobile.RZBAL-SWIFT-UAT"
+            ],
+            "components":[
+               {
+                  "/":"/push-provisioning-request/*",
+                  "comment":"Open the app for tokens exchange"
+               }
+            ]
+         }
+      ]
+   }
+}
